@@ -9,6 +9,8 @@ import { ManualStateEditor } from '../components/ManualStateEditor'
 import { GestureControl } from '../components/GestureControl'
 import { PermutationDiagram } from '../permutation/visualization/PermutationDiagram'
 import { useCubeStore } from '../store/cubeStore'
+import knuLogo from '../../Logos/images.jpeg'
+import smartSoftwareLabLogo from '../../Logos/New.png'
 
 export function App() {
   const [view, setView] = useState('Play')
@@ -61,5 +63,12 @@ export function App() {
         <article><h3>Explore the mathematics</h3><p>Every face turn updates the sticker permutation. Scramble, solve, then step through the solution. Camera-based contact is an estimated screen projection; use Gentle sensitivity for fine movements.</p></article>
       </div></section></>}
     </main>
+    <footer className="developed-by" aria-label="Developed by">
+      <span className="developed-by-label">Developed by</span>
+      <div className="developer-logos">
+        <img src={smartSoftwareLabLogo} alt="Smart Software Lab, Kyungpook National University" />
+        <img src={knuLogo} alt="Kyungpook National University" />
+      </div>
+    </footer>
   </div>
 }

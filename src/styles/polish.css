@@ -83,3 +83,9 @@ section { scroll-margin-top: 20px; }
   .control-guide > div { grid-template-columns: 1fr; gap: 8px; }
 }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; } }
+
+.developed-by { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 18px; padding: 28px 16px 36px; margin-top: 32px; border-top: 1px solid #25392d; }
+.developed-by-label { color: #9fb5a7; font-size: 13px; font-weight: 600; letter-spacing: .04em; }
+.developer-logos { display: flex; align-items: center; justify-content: center; gap: 20px; }
+.developer-logos img { display: block; width: auto; max-width: min(220px, 38vw); height: 54px; object-fit: contain; }
+@media (max-width: 520px) { .developed-by { gap: 12px; padding-bottom: 28px; } .developer-logos { gap: 14px; } .developer-logos img { height: 42px; } }
