@@ -34,6 +34,14 @@ export function App() {
 
   return <div className="app-shell friendly-app">
     <main id="workspace">
+      <aside className="developer-banner" aria-label="Developed by">
+        <p className="developer-banner-label">Developed by</p>
+        <div className="developer-marks">
+          <img src={smartSoftwareLabLogo} alt="Smart Software Lab" width="126" height="64" />
+          <span className="developer-marks-divider" aria-hidden="true" />
+          <img src={knuLogo} alt="Kyungpook National University" width="126" height="64" />
+        </div>
+      </aside>
       <header className="simple-header"><a className="simple-brand" href="#workspace" onClick={() => setView('Play')}><Icon name="cube" size={28}/>CubeX</a><nav aria-label="Workspace">{['Play', 'Scan a cube', 'Learn'].map((item) => <button key={item} aria-current={view === item ? 'page' : undefined} onClick={() => { setView(item); if (item !== 'Play') setHands(false) }}>{item}</button>)}</nav></header>
       <div className="welcome"><h1>{view === 'Play' ? 'Let’s solve your cube.' : view === 'Scan a cube' ? 'Bring your real cube in.' : 'A few moves. A little magic.'}</h1><p>{view === 'Play' ? 'Mix it up, explore a few turns, then follow the solution.' : view === 'Scan a cube' ? 'Scan all six sides, or enter the colours yourself.' : 'Start with the basics. Explore the maths when you’re ready.'}</p></div>
 
@@ -63,15 +71,5 @@ export function App() {
         <article><h3>Explore the mathematics</h3><p>Every face turn updates the sticker permutation. Scramble, solve, then step through the solution. Camera-based contact is an estimated screen projection; use Gentle sensitivity for fine movements.</p></article>
       </div></section></>}
     </main>
-    <footer className="developed-by" aria-label="Developed by">
-      <div className="developer-credit">
-        <p className="developed-by-label">Developed by</p>
-        <div className="developer-logos" aria-label="Smart Software Lab and Kyungpook National University">
-          <div className="developer-logo-card"><img src={smartSoftwareLabLogo} alt="Smart Software Lab" /></div>
-          <span className="developer-collab-mark" aria-hidden="true">×</span>
-          <div className="developer-logo-card"><img src={knuLogo} alt="Kyungpook National University" /></div>
-        </div>
-      </div>
-    </footer>
   </div>
 }
