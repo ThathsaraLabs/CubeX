@@ -64,10 +64,13 @@ export function App() {
       </div></section></>}
     </main>
     <footer className="developed-by" aria-label="Developed by">
-      <span className="developed-by-label">Developed by</span>
-      <div className="developer-logos">
-        <img src={smartSoftwareLabLogo} alt="Smart Software Lab, Kyungpook National University" />
-        <img src={knuLogo} alt="Kyungpook National University" />
+      <div className="developer-credit">
+        <p className="developed-by-label">Developed by</p>
+        <div className="developer-logos" aria-label="Smart Software Lab and Kyungpook National University">
+          <div className="developer-logo-card"><img src={smartSoftwareLabLogo} alt="Smart Software Lab" /></div>
+          <span className="developer-collab-mark" aria-hidden="true">×</span>
+          <div className="developer-logo-card"><img src={knuLogo} alt="Kyungpook National University" /></div>
+        </div>
       </div>
     </footer>
   </div>
